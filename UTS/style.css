@@ -1,0 +1,112 @@
+:root {
+  --maroon: #800000;
+  --pink: #f8c8dc;
+  --white: #fff;
+  --gray: #555;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--pink);
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: var(--maroon);
+  text-align: center;
+}
+
+.login-box {
+  background: var(--white);
+  width: 320px;
+  margin: 100px auto;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(128, 0, 0, 0.4);
+}
+
+.login-box input[type=text],
+.login-box input[type=password] {
+  width: 90%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid var(--maroon);
+  border-radius: 5px;
+}
+
+.login-box input[type=submit] {
+  background: var(--maroon);
+  color: var(--white);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-box input[type=submit]:hover {
+  background: #a00000;
+}
+
+.login-box a {
+  color: var(--maroon);
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+.book-list {
+  display: grid;
+  gap: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.book {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(128, 0, 0, 0.3);
+}
+
+.book h3 {
+  margin: 0;
+  color: var(--maroon);
+}
+
+.book p {
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.book a {
+  display: inline-block;
+  background: var(--maroon);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.book a:hover {
+  background: #a00000;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  color: var(--maroon);
+}
+
+hr {
+  border: 1px solid var(--maroon);
+}
