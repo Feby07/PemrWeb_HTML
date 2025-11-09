@@ -9,8 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $penulis = trim($_POST['penulis'] ?? '');
     $sinopsis = trim($_POST['sinopsis'] ?? '');
 
-    if ($judul === '') {
-        $err = 'Judul wajib diisi.';
+    if ($judul === '' || $penulis === '') {
+      $err = 'Judul dan Penulis wajib diisi.';
     } else {
         try {
             qparams(
@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8">
   <title>Tambah Buku</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -81,15 +82,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       cursor: pointer;
       font-size: 14px;
     }
-    .btn-save {
-      background-color: #800000;
-      color: white;
-    }
-    .btn-back {
-      background-color: #a52a2a;
-      color: white;
-      margin-left: 8px;
-    }
     .alert-error {
       background-color: #ffe6e6;
       border: 1px solid #e99;
@@ -119,8 +111,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <textarea name="sinopsis"><?= htmlspecialchars($sinopsis) ?></textarea>
 
       <div style="text-align: center;">
-        <button class="btn btn-save" type="submit">Simpan</button>
-        <a href="index.php" class="btn btn-back">Kembali</a>
+        <button class="btn btn-primary" type="submit">Simpan</button>
+        <a href="index.php" class="btn btn-secondary">Kembali</a>
       </div>
     </form>
   </div>
